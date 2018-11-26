@@ -1,0 +1,25 @@
+---
+- name: Creates temporary directory
+  file:
+    path: /tmp/cloud-build-local_latest
+    state: directory
+  tags:
+  - google-cloud
+
+- name: Extract Google Cloud Build
+  unarchive:
+    src: https://storage.googleapis.com/local-builder/cloud-build-local_latest.tar.gz
+    dest: /tmp/cloud-build-local_latest
+    remote_src: yes
+  tags:
+  - google-cloud
+
+- name: Install local Google Cloud Build
+  copy:
+    src: "{{ item }}"
+    mode: a+x
+    dest: /usr/local/bin/cloud-build-local
+  with_fileglob:
+    - /tmp/cloud-build-local_latest/cloud-build-local_linux_amd64-v*
+  tags:
+  - google-cloud
