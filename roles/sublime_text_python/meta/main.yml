@@ -1,0 +1,4 @@
+---
+dependencies:
+- role: pip
+- role: sublime_text_lsp

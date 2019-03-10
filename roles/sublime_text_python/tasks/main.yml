@@ -1,0 +1,39 @@
+---
+- name: Install Python Languageserver
+  pip:
+    name: python-language-server
+    state: latest
+    executable: pip3
+  become: no
+
+- name: Check whether Python Languageserver
+  command: which pyls
+  become: no
+
+- name: Install Rope
+  pip:
+    name: rope
+    state: latest
+    executable: pip3
+  become: no
+
+- name: Install Pyflakes
+  pip:
+    name: pyflakes
+    state: latest
+    executable: pip3
+  become: no
+
+- name: Install Pycodestyle
+  pip:
+    name: pycodestyle
+    state: latest
+    executable: pip3
+  become: no
+
+- name: Install Autopep8
+  pip:
+    name: autopep8
+    state: latest
+    executable: pip3
+  become: no
