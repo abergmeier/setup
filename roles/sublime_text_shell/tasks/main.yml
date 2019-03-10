@@ -1,0 +1,4 @@
+---
+- name: Install ShellCheck in SublimeText
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure SublimeLinter-shellcheck
+  become: no
