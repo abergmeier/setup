@@ -1,0 +1,4 @@
+- name: Install Go
+  apt:
+    name: golang
+    state: latest

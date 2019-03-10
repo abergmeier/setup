@@ -1,0 +1,7 @@
+- name: Install Go Langserver
+  command: go get -u github.com/sourcegraph/go-langserver
+  become: no
+
+- name: Check Go Langserver
+  command: which go-langserver
+  become: no

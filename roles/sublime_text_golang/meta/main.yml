@@ -1,0 +1,4 @@
+---
+dependencies:
+- role: golang
+- role: sublime_text_lsp
