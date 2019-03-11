@@ -32,8 +32,11 @@ def main():
         xdg_user_config(),
         "sublime-text-3/Packages/User/Package Control.sublime-settings"
     )
-    with open(json_path) as f:
-        data = json.load(f)
+    try:
+        with open(json_path) as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        raise Exception("Install Package Control first")
 
     packages.installed = set(sorted(data.get(
         "installed_packages",
