@@ -1,12 +1,11 @@
----
-- name: Install Python Languageserver
+- name: Install Python Language Server
   pip:
     name: python-language-server
     state: latest
     executable: pip3
   become: no
 
-- name: Check whether Python Languageserver
+- name: Is Python Language Server in PATH
   command: which pyls
   become: no
 
