@@ -1,0 +1,6 @@
+---
+- name: Setup localhost
+  hosts: localhost
+  become: true
+  roles:
+    - sublime_text_rust

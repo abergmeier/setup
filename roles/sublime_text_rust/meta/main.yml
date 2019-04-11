@@ -1,0 +1,4 @@
+---
+dependencies:
+- role: rust
+- role: sublime_text_lsp

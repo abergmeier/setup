@@ -1,0 +1,3 @@
+- name: Install Rust Language Server
+  become: no
+  command: $HOME/.cargo/bin/rustup component add rls rust-analysis rust-src
