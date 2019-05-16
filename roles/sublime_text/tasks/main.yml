@@ -2,3 +2,8 @@
 - name: Install latest Sublime
   apt:
     name: sublime-text
+
+- name: Install SublimeLinter into Sublime Text
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure SublimeLinter
+  become: no
+

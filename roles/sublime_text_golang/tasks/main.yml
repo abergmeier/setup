@@ -5,3 +5,15 @@
 - name: Check Go Langserver
   command: which go-langserver
   become: no
+
+- name: Install SublimeLinter-golint into Sublime Text
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure SublimeLinter-golint
+  become: no
+
+- name: Install SublimeLinter-gotype into Sublime Text
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure SublimeLinter-gotype
+  become: no
+
+- name: Install SublimeLinter-golvet into Sublime Text
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure SublimeLinter-govet
+  become: no
