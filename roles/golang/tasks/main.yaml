@@ -2,3 +2,11 @@
   apt:
     name: golang
     state: latest
+
+- name: Install gotype
+  shell: GO111MODULE=on go install golang.org/x/tools/cmd/gotype
+  become: no
+
+- name: Install golint
+  shell: GO111MODULE=on go install golang.org/x/lint/golint
+  become: no
