@@ -1,5 +1,5 @@
 - name: Install Go Langserver
-  command: go get -u github.com/sourcegraph/go-langserver
+  shell: GO111MODULE=on go install github.com/sourcegraph/go-langserver
   become: no
 
 - name: Check Go Langserver
