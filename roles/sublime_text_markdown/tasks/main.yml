@@ -1,0 +1,4 @@
+---
+- name: Install MarkdownPreview into Sublime Text
+  command: python3 "{{ role_path }}/../sublime_text/files/plugins.py" --ensure MarkdownPreview
+  become: no
